@@ -1,9 +1,11 @@
 import {Injectable, Inject} from '@nestjs/common';
-import {IGameEntity} from "../types";
 import * as firebase from "firebase";
-import {CreateGameDto, IFirestoreGame, UpdateGameDto} from "./types";
-import {convertGameFirestoreModelIntoGameModel, getGameFirestoreModel} from "./games.model";
-import {PROVIDER_FIRESTORE} from "./constants";
+import {
+    convertGameFirestoreModelIntoGameModel, CreateGameDto, getGameFirestoreModel,
+    UpdateGameDto
+} from "./games.model";
+import {PROVIDER_FIRESTORE} from "../constants";
+import {IFirestoreGame, IGameEntity} from "../types";
 
 @Injectable()
 export class GamesService {

@@ -6,7 +6,7 @@ import {
 } from '@nestjs/common';
 import {GamesService} from "./games.service";
 import {IGameEntity} from "../types";
-import {CreateGameDto, UpdateGameDto} from "./types";
+import {CreateGameDto, UpdateGameDto} from "./games.model";
 
 @Controller('games')
 export class GamesController {

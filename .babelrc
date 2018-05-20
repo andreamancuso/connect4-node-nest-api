@@ -4,13 +4,11 @@
       "targets": { "node": 8 },
       "useBuiltIns": true
     }],
-    "stage-0",
-    "react"
+    "stage-0"
   ],
   "plugins": [
     "add-module-exports",
-    "dynamic-import-webpack",
-    ["import", { "libraryName": "antd", "style": "css" }]
+    "dynamic-import-webpack"
   ],
   "env": {
     "production": {

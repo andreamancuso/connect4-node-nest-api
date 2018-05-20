@@ -1,4 +1,4 @@
-import {ConfigService} from "./config.service";
+import {ConfigService} from "./config/config.service";
 import {initFirestore} from "./firestore.client";
 import {PROVIDER_FIRESTORE} from "./constants";
 

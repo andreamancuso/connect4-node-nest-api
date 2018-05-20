@@ -1,5 +1,5 @@
 import { NestFactory } from '@nestjs/core';
-import {GamesModule} from "./games.module";
+import {GamesModule} from "./games/games.module";
 
 const corsOptions = {
     origin: 'http://localhost:1212'

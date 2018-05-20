@@ -1,6 +1,21 @@
 import * as firebase from "firebase";
-import {IFirestoreGame} from "./types";
-import {GameResult} from "../types";
+import {GameResult, IFirestoreGame, IMove} from "../types";
+import {IsNotEmpty, IsString} from "class-validator";
+
+export class CreateGameDto {
+    @IsNotEmpty()
+    @IsString()
+    readonly player1: string;
+
+    @IsNotEmpty()
+    @IsString()
+    readonly player2: string;
+}
+
+export class UpdateGameDto {
+    readonly moves: IMove[];
+    readonly result: GameResult;
+}
 
 export const getGameFirestoreModel = (): IFirestoreGame => ({
     player1: '',

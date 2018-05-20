@@ -1,8 +1,10 @@
-export interface IAPIClientConf {
-    timeout: number,
-    endpoints: {
-        base: string
-    }
+import * as firebase from "firebase";
+import Timestamp = firebase.firestore.Timestamp;
+
+export interface IFirebaseConfig {
+    readonly apiKey: string,
+    readonly projectId: string,
+    readonly authDomain: string
 }
 
 export enum CoinSlot {
@@ -20,9 +22,6 @@ export enum GameResult {
     Player2Won = 2
 }
 
-export type Column = CoinSlot[];
-export type Grid = Column[]
-
 export interface IMove {
     player: PlayerCoinSlot,
     columnIndex: number
@@ -38,4 +37,12 @@ export interface IGame {
 
 export interface IGameEntity extends IGame {
     id: string,
+}
+
+export interface IFirestoreGame {
+    player1: string,
+    player2: string,
+    moves: IMove[],
+    date: Timestamp,
+    result: GameResult
 }
