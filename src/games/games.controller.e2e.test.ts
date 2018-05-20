@@ -4,11 +4,11 @@ import * as sinon from 'sinon';
 import { Test } from '@nestjs/testing';
 import {INestApplication} from '@nestjs/common';
 
-import { GamesController } from '../../src/be/games.controller';
-import { GamesModule } from '../../src/be/games.module';
-import { GamesService } from '../../src/be/games.service';
-import { ConfigService } from "../../src/be/config.service";
-import {PROVIDER_FIRESTORE} from "../../src/be/constants";
+import { GamesController } from './games.controller';
+import { GamesModule } from './games.module';
+import { GamesService } from './games.service';
+import { ConfigService } from "../config/config.service";
+import {PROVIDER_FIRESTORE} from "../constants";
 
 describe('GamesController', () => {
     let app: INestApplication;

@@ -1,8 +1,8 @@
 import {expect} from 'chai';
 import * as sinon from 'sinon';
-import { GamesController } from '../../src/be/games.controller';
-import { GamesService } from '../../src/be/games.service';
-import {CreateGameDto} from "../../src/be/types";
+import { GamesController } from './games.controller';
+import { GamesService } from './games.service';
+import {CreateGameDto} from "./games.model";
 
 describe('GamesController', () => {
     let gamesController: GamesController;
