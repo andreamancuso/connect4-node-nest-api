@@ -30,7 +30,7 @@ export class GamesController {
 
     @Post()
     async create(@Body() createGameDto: CreateGameDto, @Res() res) {
-        if (!createGameDto.player1 || !createGameDto.player1) {
+        if (!createGameDto.player1 || !createGameDto.player2) {
             // todo: once metatype gets fixed, remove this as ValidationPipe should just work
             throw new HttpException('Invalid data', HttpStatus.BAD_REQUEST);
         }
