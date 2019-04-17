@@ -2,7 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import {GamesModule} from "./games/games.module";
 
 const corsOptions = {
-    origin: 'http://localhost:1212'
+    origin: 'http://localhost:8080'
 };
 
 async function bootstrap() {
